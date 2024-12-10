@@ -1,5 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 // import Login from "./screens/authScreens/LoginScreen";
 import Signup from "./screens/authScreens/SignupScreen";
 import HomeScreen from "./screens/homeScreen/HomeScreen";
@@ -10,7 +16,13 @@ import { NavigationContainer } from "@react-navigation/native";
 export default function App() {
   return (
     <NavigationContainer>
-      <MapScreen />
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={{ flex: 1 }}
+        keyboardVerticalOffset={Platform.OS === "ios" ? -64 : 0}
+      >
+        <MapScreen />
+      </KeyboardAvoidingView>
     </NavigationContainer>
   );
 }

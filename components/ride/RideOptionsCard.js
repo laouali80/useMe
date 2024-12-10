@@ -3,8 +3,8 @@ import React from "react";
 
 const RideOptionsCard = () => {
   return (
-    <SafeAreaView>
-      <Text>RideOptionsCard</Text>
+    <SafeAreaView style={tw`bg-white flex-grow`}>
+      <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
     </SafeAreaView>
   );
 };
