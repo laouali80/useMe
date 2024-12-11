@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { COLORS } from "../../constants/COLORS";
 
-const loginScreen = () => {
+const Login = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
       <View style={tw`p-5`}>
@@ -43,6 +44,6 @@ const loginScreen = () => {
   );
 };
 
-export default loginScreen;
+export default Login;
 
 const styles = StyleSheet.create({});

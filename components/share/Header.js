@@ -12,4 +12,15 @@ const header = () => {
 
 export default header;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  upperRow: {
+    marginHorizontal: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    position: "absolute",
+    width: 44, // xxlarge
+    top: 25, // width
+    zIndex: 999,
+  },
+});

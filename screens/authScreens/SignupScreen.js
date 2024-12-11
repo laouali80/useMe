@@ -1,7 +1,17 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  Button,
+  Pressable,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import React from "react";
+import { COLORS } from "../../constants/COLORS";
+import tw from "twrnc";
 
-const SignupScreen = () => {
+const Signup = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
       <View style={tw`p-5`}>
@@ -64,6 +74,6 @@ const SignupScreen = () => {
   );
 };
 
-export default SignupScreen;
+export default Signup;
 
 const styles = StyleSheet.create({});
