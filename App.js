@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 // import Login from "./screens/authScreens/LoginScreen";
 import Signup from "./screens/authScreens/SignupScreen";
 import HomeScreen from "./screens/homeScreen/HomeScreen";
-import MapScreen from "./screens//rideScreens/MapScreen";
+import MapScreen from "../screens//rideScreens/MapScreen";
 
 import { NavigationContainer } from "@react-navigation/native";
 
