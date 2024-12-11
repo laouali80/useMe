@@ -18,13 +18,13 @@ const data = [
     id: "cab-123",
     title: "Cab",
     multiplier: 1.75,
-    image: "",
+    image: require("../../assets/images/car-white.png"),
   },
   {
     id: "keke-321",
     title: "Keke",
     multiplier: 1,
-    image: "",
+    image: require("../../assets/images/tricycle.png"),
   },
 ];
 
@@ -36,7 +36,7 @@ const RideOptionsScreen = () => {
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("DestinationSelectionScreen")}
-          style={tw`absolute top-3 left-5 p-5 rounded-full`}
+          style={tw`absolute top-3 left-5 z-50 p-3 rounded-full`}
         >
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
@@ -73,7 +73,6 @@ const RideOptionsScreen = () => {
 
       <View>
         <TouchableOpacity
-          disabled={!selected}
           onPress={() => navigation.navigate("TripScreen")}
           style={tw`bg-[#2358ea] py-3 m-3 ${!selected && "bg-gray-300"}`}
         >

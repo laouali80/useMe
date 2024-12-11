@@ -1,10 +1,12 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import Rating from "../Rating";
+import tw from "twrnc";
+import { Icon } from "@rneui/themed";
 
 const Trip = ({ status }) => {
   return (
-    <View>
+    <View style={tw`py-1 px-5`}>
       <View
         style={{
           flexDirection: "row",
@@ -29,9 +31,13 @@ const Trip = ({ status }) => {
         )}
 
         <Image
-          style={{ width: 50, height: 50, resizeMode: "contain" }}
-          source={{}}
-          // source={{uri: item.image}}
+          style={{
+            width: 40,
+            height: 40,
+            resizeMode: "contain",
+          }}
+          source={require("../../assets/images/tricycle.png")}
+          // source={{ uri: image }}
         />
       </View>
 
@@ -39,19 +45,27 @@ const Trip = ({ status }) => {
         <View style={tw`flex flex-row justify-between bg-[#c8d6fd] p-5 my-5`}>
           <View style={tw`flex flex-row`}>
             <Image
-              style={{ width: 50, height: 50, resizeMode: "contain" }}
-              source={{}}
+              style={[
+                tw`rounded-full`,
+                {
+                  width: 50,
+                  height: 50,
+                  resizeMode: "contain",
+                  // objectFit: "contain",
+                },
+              ]}
+              source={require("../../assets/profile/prof1.jpg")}
               // source={{uri: item.image}}
             />
-            <View style={tw`flex flex-column`}>
+            <View style={tw`flex flex-column justify-between`}>
               <Text>Salaman</Text>
-              <Rating value={4} />
+              <Rating value={5} />
               <Text>07031100411</Text>
             </View>
           </View>
-          <View style={tw`flex flex-column`}>
+          <View style={tw`flex flex-column justify-between `}>
             <View>
-              <Text style={tw`text-[#5c89f4]`}>N500</Text>
+              <Text style={tw`text-[#5c89f4] text-center`}>N500</Text>
             </View>
             <View>
               <Text>Wallet payment</Text>
@@ -66,10 +80,12 @@ const Trip = ({ status }) => {
         </View>
       )}
 
-      {status === "approaching" || status === "waiting" ? (
+      {status === "approaching" || status === "arrived" ? (
         <View>
           <View style={tw`flex flex-column`}>
-            <Text>Icon</Text>
+            <View>
+              <Icon name="xmark" size={25} color="red" type="font-awesome" />
+            </View>
             <Text>Cancel Ride</Text>
           </View>
           <View style={tw`flex flex-column`}>

@@ -1,6 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
+import tw from "twrnc";
+import { Icon } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 const DestinationSelectionScreen = () => {
   const navigation = useNavigation();
@@ -40,10 +49,10 @@ const DestinationSelectionScreen = () => {
       </View> */}
 
       <View
-        style={tw`bg-white py-2 mt-auto border-t border-gray-100 justify-evenly`}
+        style={tw`flex flex-row justify-center bg-white py-2 mt-auto border-t border-gray-100 `}
       >
         <TouchableOpacity
-          style={tw`flex flex-row justify-between bg-[#2358ea] w-24 px-4 py-3 rounded-full`}
+          style={tw`flex flex-row justify-between  bg-[#2358ea] w-24 px-4 py-3 rounded-full`}
           onPress={() => navigation.navigate("RideOptionsScreen")}
         >
           <Icon name="car" type="font-awesome" color="white" size={16} />
