@@ -15,7 +15,7 @@ const Signup = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
       <View style={tw`p-5`}>
-        <Text style={tw`text-[]`}>UseMe.</Text>
+        <Text style={tw`text-[#5c89f4]`}>UseMe.</Text>
         <Text>Create your UseMe account.</Text>
 
         {/* FIRST NAME */}
@@ -30,6 +30,13 @@ const Signup = () => {
         <TextInput
           //   inlineImageLeft={}
           placeholder="Enter your last name"
+        />
+
+        {/* EMAIL */}
+        <Text>Email</Text>
+        <TextInput
+          //   inlineImageLeft={}
+          placeholder="Enter your email"
         />
 
         {/* PHONE NUMBER */}
@@ -76,4 +83,17 @@ const Signup = () => {
 
 export default Signup;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input: {
+    padding: 5,
+    borderColor: "black",
+    borderWidth: 1,
+    minWidth: 100,
+    marginBottom: 20,
+    marginHorizontal: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 3,
+    // width: "50%",
+  },
+});
