@@ -15,7 +15,9 @@ const DestinationSelectionScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={tw`bg-white flex-1`}>
+    <SafeAreaView
+      style={tw`bg-white flex-1 rounded-tl-[20px] rounded-tr-[20px]`}
+    >
       <Text style={tw`text-center py-5 text-xl`}>Good Morning, Ali</Text>
       {/* <View style={tw`border-t border-gray-200 flex-shrink`}>
         <View>

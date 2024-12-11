@@ -5,7 +5,9 @@ import tw from "twrnc";
 
 const TripScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-white flex-grow`}>
+    <SafeAreaView
+      style={tw`bg-white flex-grow rounded-tl-[20px] rounded-tr-[20px]`}
+    >
       <Trip status={"approaching"} />
     </SafeAreaView>
   );

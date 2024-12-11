@@ -32,7 +32,9 @@ const RideOptionsScreen = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
   return (
-    <SafeAreaView style={tw`bg-white flex-grow`}>
+    <SafeAreaView
+      style={tw`bg-white flex-grow rounded-tl-[20px] rounded-tr-[20px]`}
+    >
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("DestinationSelectionScreen")}
