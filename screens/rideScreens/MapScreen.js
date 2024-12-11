@@ -8,6 +8,7 @@ import DestinationSelection from "../../components/ride/DestinationSelection";
 // import { Icon } from "react-native-elements";
 import { Icon } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
+import ConnectedToRider from "../../components/ride/ConnectedToRider";
 
 const MapScreen = () => {
   const Stack = createStackNavigator();
@@ -41,6 +42,20 @@ const MapScreen = () => {
               headerShown: false,
             }}
           />
+          <Stack.Screen
+            name="ConnectedToRider"
+            component={ConnectedToRider}
+            options={{
+              headerShown: false,
+            }}
+          />
+          {/* <Stack.Screen
+            name="ConnectedToRider"
+            component={ConnectedToRider}
+            options={{
+              headerShown: false,
+            }}
+          /> */}
         </Stack.Navigator>
       </View>
 

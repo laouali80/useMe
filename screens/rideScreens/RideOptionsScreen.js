@@ -27,15 +27,15 @@ const data = [
     image: "",
   },
 ];
-const RideOptionsCard = () => {
+
+const RideOptionsScreen = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
-
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate("DestinationSelection")}
+          onPress={() => navigation.navigate("DestinationSelectionScreen")}
           style={tw`absolute top-3 left-5 p-5 rounded-full`}
         >
           <Icon name="chevron-left" type="fontawesome" />
@@ -73,7 +73,8 @@ const RideOptionsCard = () => {
 
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate("ConnectedToRider")}
+          disabled={!selected}
+          onPress={() => navigation.navigate("TripScreen")}
           style={tw`bg-[#2358ea] py-3 m-3 ${!selected && "bg-gray-300"}`}
         >
           <Text style={tw`text-center text-white text-xl`}>
@@ -85,6 +86,6 @@ const RideOptionsCard = () => {
   );
 };
 
-export default RideOptionsCard;
+export default RideOptionsScreen;
 
 const styles = StyleSheet.create({});

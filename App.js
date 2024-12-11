@@ -9,14 +9,15 @@ import {
 // import Login from "./screens/authScreens/LoginScreen";
 import Signup from "./screens/authScreens/SignupScreen";
 import HomeScreen from "./screens/homeScreen/HomeScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { NavigationContainer } from "@react-navigation/native";
 import MapScreen from "./screens/rideScreens/mapScreen";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return (
     <NavigationContainer>
+      {/* this SafeAreaProvider is to protect the icons from danger zone (react elements) */}
       <SafeAreaProvider>
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
