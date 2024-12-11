@@ -12,7 +12,7 @@ import HomeScreen from "./screens/homeScreen/HomeScreen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { NavigationContainer } from "@react-navigation/native";
-import MapScreen from "../screens/rideScreens/MapScreen";
+import MapScreen from "./screens/rideScreens/mapScreen";
 
 export default function App() {
   return (

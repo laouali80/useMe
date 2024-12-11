@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Icon } from "react-native-elements";
+// import { Icon } from "react-native-elements";
+import { Icon } from "@rneui/themed";
 
 const Rating = ({ value, text }) => {
   const size = 8;
