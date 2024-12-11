@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const OnboardCards = [
@@ -23,12 +23,19 @@ const OnboardCards = [
 ];
 const Onboarding = () => {
   return (
-    <View>
-      <View>
+    <SafeAreaView>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("HomeScreen")}
+        style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+      >
+        <Icon name="menu" />
+      </TouchableOpacity>
+
+      <View style={tw`h-1/2`}>
         <Image source={{}} style={{ aspectRatio: 1, resizeMode: "cover" }} />
       </View>
-      <View>
-        <Text>Choose Your Destination</Text>
+      <View style={tw`h-1/2`}>
+        <Text style={tw`text-center text-[]`}>Choose Your Destination</Text>
         <Text>
           With UseMe you can choose your destination from your location and
           expect a ride in less than 10 mins.
@@ -36,7 +43,7 @@ const Onboarding = () => {
         <Text>---</Text>
         <Button title="Continue" style={{}} onPress={{}} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
