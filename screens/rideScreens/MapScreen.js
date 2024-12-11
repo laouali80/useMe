@@ -5,7 +5,8 @@ import Map from "../../components/ride/Map";
 import { createStackNavigator } from "@react-navigation/stack";
 import RideOptionsCard from "../../components/ride/RideOptionsCard";
 import DestinationSelection from "../../components/ride/DestinationSelection";
-import { Icon } from "react-native-elements";
+// import { Icon } from "react-native-elements";
+import { Icon } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
 
 const MapScreen = () => {
