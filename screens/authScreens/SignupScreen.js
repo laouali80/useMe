@@ -2,81 +2,113 @@ import {
   Button,
   Pressable,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
-import { COLORS } from "../../constants/COLORS";
+import {
+  FontAwesome6,
+  MaterialCommunityIcons,
+  SimpleLineIcons,
+  Ionicons,
+} from "@expo/vector-icons";
 import tw from "twrnc";
 
 const Signup = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
-      <View style={tw`p-5`}>
-        <Text style={tw`text-[#5c89f4]`}>UseMe.</Text>
-        <Text>Create your UseMe account.</Text>
+      <ScrollView style={tw`px-5 py-2`}>
+        <Text style={tw`text-[#5c89f4] font-bold text-2xl mb-1`}>UseMe.</Text>
+        <Text style={tw`text-gray-400 font-semibold text-xl mb-8`}>
+          Create your UseMe account.
+        </Text>
 
         {/* FIRST NAME */}
-        <Text>First Name</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>First Name</Text>
         <TextInput
-          //   inlineImageLeft={}
+          inlineImageLeft={<FontAwesome6 name="user" size={24} color="red" />}
           placeholder="Enter your first name"
+          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
         />
 
         {/* LAST NAME */}
-        <Text>Last Name</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Last Name</Text>
         <TextInput
-          //   inlineImageLeft={}
+          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
+          inlineImageLeft={<FontAwesome6 name="user" size={24} color="red" />}
           placeholder="Enter your last name"
         />
 
         {/* EMAIL */}
-        <Text>Email</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Email</Text>
         <TextInput
-          //   inlineImageLeft={}
+          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
+          inlineImageLeft={
+            <MaterialCommunityIcons
+              name="email-outline"
+              size={24}
+              color="black"
+            />
+          }
           placeholder="Enter your email"
         />
 
         {/* PHONE NUMBER */}
-        <Text>Phone Number</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>
+          Phone Number
+        </Text>
         <TextInput
-          //   inlineImageLeft={}
+          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
+          inlineImageLeft={
+            <SimpleLineIcons name="phone" size={24} color="black" />
+          }
           placeholder="Enter your phone number"
         />
 
         {/* CREATE PIN */}
-        <Text>Create Pin</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Create Pin</Text>
         <TextInput
-          //   inlineImageLeft={}
+          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
+          inlineImageLeft={
+            <Ionicons name="bag-outline" size={24} color="black" />
+          }
           placeholder="Enter your preferred pin"
           secureTextEntry={true}
           autoCapitalize="none"
         />
 
         {/* CONFIRM PIN */}
-        <Text>Confirm Pin</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>
+          Confirm Pin
+        </Text>
         <TextInput
-          //   inlineImageLeft={}
+          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
+          inlineImageLeft={
+            <Ionicons name="bag-outline" size={24} color="black" />
+          }
           placeholder="Enter pin again"
           secureTextEntry={true}
           autoCapitalize="none"
         />
 
-        <Button
-          title="Create Account"
-          style={styles.button}
-          onPress={loginValidation}
-        />
+        <TouchableOpacity style={tw`bg-[#5c89f4] items-center p-5 rounded-lg`}>
+          <Text style={tw`text-white font-bold`}>Create Account</Text>
+        </TouchableOpacity>
+        {/* <Button title="Create Account" onPress={{}} /> */}
 
-        <Text>
-          Already have an account?
-          <Pressable onPress={{}} style={{}}>
-            Sign In
-          </Pressable>
-        </Text>
-      </View>
+        <View style={tw`items-center my-2`}>
+          <Text>
+            Already have an account?
+            <Pressable onPress={{}} style={tw`bg-red-200 pl-1`}>
+              <Text style={tw`text-[#5c89f4]`}>Sign In</Text>
+            </Pressable>
+          </Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
