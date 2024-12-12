@@ -12,7 +12,8 @@ import HomeScreen from "./screens/homeScreen/HomeScreen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { NavigationContainer } from "@react-navigation/native";
-import MapScreen from "./screens/rideScreens/mapScreen";
+import Login from "./screens/authScreens/LoginScreen";
+// import MapScreen from "./screens/rideScreens/mapScreen";
 
 export default function App() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
           style={{ flex: 1 }}
           keyboardVerticalOffset={Platform.OS === "ios" ? -64 : 0}
         >
-          <MapScreen />
+          <Login />
         </KeyboardAvoidingView>
       </SafeAreaProvider>
     </NavigationContainer>
