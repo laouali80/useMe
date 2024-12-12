@@ -32,7 +32,10 @@ const Onboarding = () => {
       </TouchableOpacity>
 
       <View style={tw`h-1/2`}>
-        <Image source={{}} style={{ aspectRatio: 1, resizeMode: "cover" }} />
+        <Image
+          source={{}}
+          style={{ aspectRatio: 1, resizeMode: "cover", flex: 1 }}
+        />
       </View>
       <View style={tw`h-1/2`}>
         <Text style={tw`text-center text-[]`}>Choose Your Destination</Text>
