@@ -11,10 +11,10 @@ export const COLORS = {
   c7: "#fefefe", //(Pure white)
   c8: "#f9fafe", //(Very light blue-gray)
   c9: "#f9f9f9", //(Pale gray)
-  wallet: "#c8d6fd", //(Light pastel blue) wallet background
 };
 
 ("#2358ea"); // fund wallet
 ("#ffffff"); //(White)  inside homeNav
 ("#fafbff"); // background home
 ("#5c89f4"); // account number
+("#c8d6fd"); //(Light pastel blue) wallet background
