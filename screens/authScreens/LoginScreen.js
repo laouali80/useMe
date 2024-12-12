@@ -7,9 +7,8 @@ const Login = () => {
     <SafeAreaView style={tw`bg-white h-full w-full`}>
       <View style={tw`px-5 py-2`}>
         <Text style={tw`text-[#5c89f4] font-bold text-2xl mb-1`}>UseMe.</Text>
-        <Text style={tw`text-gray-400 font-semibold text-xl mb-8`}>
-          Welcome to UseMe.
-        </Text>
+
+        <Text style={tw`font-bold text-2xl mt-6`}>Welcome to UseMe.</Text>
         <Text style={tw`text-gray-400 font-semibold text-xl mb-8`}>
           Fill your details below to login into your UseMe account.
         </Text>
