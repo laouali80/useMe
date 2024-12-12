@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import Map from "../../components/ride/Map";
 import { createStackNavigator } from "@react-navigation/stack";
-import RideOptionsCard from "../../components/ride/RideOptionsCard";
-import DestinationSelection from "../../components/ride/DestinationSelection";
+
+import DestinationSelectionScreen from "./DestinationSelectionScreen";
+import RideOptionsScreen from "./RideOptionsScreen";
+import TripScreen from "./TripScreen";
 
 const MapScreen = () => {
   const Stack = createStackNavigator();
+
   return (
     <View>
       <View style={tw`h-1/2`}>
@@ -16,15 +19,22 @@ const MapScreen = () => {
       <View style={tw`h-1/2`}>
         <Stack.Navigator>
           <Stack.Screen
-            name="DestinationSelection"
-            component={DestinationSelection}
+            name="DestinationSelectionScreen"
+            component={DestinationSelectionScreen}
             options={{
               headerShown: false,
             }}
           />
           <Stack.Screen
-            name="RideOptionsCard"
-            component={RideOptionsCard}
+            name="RideOptionsScreen"
+            component={RideOptionsScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="TripScreen"
+            component={TripScreen}
             options={{
               headerShown: false,
             }}
