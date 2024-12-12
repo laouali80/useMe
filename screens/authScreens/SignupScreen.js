@@ -29,71 +29,99 @@ const Signup = () => {
 
         {/* FIRST NAME */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>First Name</Text>
-        <TextInput
-          inlineImageLeft={<FontAwesome6 name="user" size={24} color="red" />}
-          placeholder="Enter your first name"
-          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
-        />
+        <View
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+        >
+          <FontAwesome6 name="user" size={24} style={tw`mr-3 text-gray-500`} />
+          <TextInput
+            placeholder="Enter your first name"
+            style={tw`flex-1 font-semibold`}
+          />
+        </View>
 
         {/* LAST NAME */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Last Name</Text>
-        <TextInput
-          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
-          inlineImageLeft={<FontAwesome6 name="user" size={24} color="red" />}
-          placeholder="Enter your last name"
-        />
+        <View
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+        >
+          <FontAwesome6 name="user" size={24} style={tw`mr-3 text-gray-500`} />
+          <TextInput
+            style={tw`flex-1 font-semibold`}
+            placeholder="Enter your last name"
+          />
+        </View>
 
         {/* EMAIL */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Email</Text>
-        <TextInput
-          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
-          inlineImageLeft={
-            <MaterialCommunityIcons
-              name="email-outline"
-              size={24}
-              color="black"
-            />
-          }
-          placeholder="Enter your email"
-        />
+        <View
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+        >
+          <MaterialCommunityIcons
+            name="email-outline"
+            size={24}
+            style={tw`mr-3 text-gray-500`}
+          />
+          <TextInput
+            style={tw`flex-1 font-semibold`}
+            placeholder="Enter your email"
+          />
+        </View>
 
         {/* PHONE NUMBER */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>
           Phone Number
         </Text>
-        <TextInput
-          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
-          inlineImageLeft={
-            <SimpleLineIcons name="phone" size={24} color="black" />
-          }
-          placeholder="Enter your phone number"
-        />
+        <View
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+        >
+          <SimpleLineIcons
+            name="phone"
+            size={24}
+            style={tw`mr-3 text-gray-500`}
+          />
+          <TextInput
+            style={tw`flex-1 font-semibold`}
+            placeholder="Enter your phone number"
+          />
+        </View>
 
         {/* CREATE PIN */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Create Pin</Text>
-        <TextInput
-          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
-          inlineImageLeft={
-            <Ionicons name="bag-outline" size={24} color="black" />
-          }
-          placeholder="Enter your preferred pin"
-          secureTextEntry={true}
-          autoCapitalize="none"
-        />
+        <View
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+        >
+          <Ionicons
+            name="bag-outline"
+            size={24}
+            style={tw`mr-3 text-gray-500`}
+          />
+          <TextInput
+            style={tw`flex-1 font-semibold`}
+            placeholder="Enter your preferred pin"
+            secureTextEntry={true}
+            autoCapitalize="none"
+          />
+        </View>
 
         {/* CONFIRM PIN */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>
           Confirm Pin
         </Text>
-        <TextInput
-          style={tw`bg-[#edf0ff] p-3 rounded-lg font-semibold mb-5`}
-          inlineImageLeft={
-            <Ionicons name="bag-outline" size={24} color="black" />
-          }
-          placeholder="Enter pin again"
-          secureTextEntry={true}
-          autoCapitalize="none"
-        />
+        <View
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+        >
+          <Ionicons
+            name="bag-outline"
+            size={24}
+            style={tw`mr-3 text-gray-500`}
+          />
+          <TextInput
+            style={tw`flex-1 font-semibold`}
+            placeholder="Enter pin again"
+            secureTextEntry={true}
+            autoCapitalize="none"
+          />
+        </View>
 
         <TouchableOpacity style={tw`bg-[#5c89f4] items-center p-5 rounded-lg`}>
           <Text style={tw`text-white font-bold`}>Create Account</Text>
@@ -103,9 +131,12 @@ const Signup = () => {
         <View style={tw`items-center my-2`}>
           <Text>
             Already have an account?
-            <Pressable onPress={{}} style={tw`bg-red-200 pl-1`}>
-              <Text style={tw`text-[#5c89f4]`}>Sign In</Text>
-            </Pressable>
+            <Text
+              style={tw`text-[#5c89f4]`}
+              onPress={() => console.log("Sign In pressed")}
+            >
+              Sign In
+            </Text>
           </Text>
         </View>
       </ScrollView>
