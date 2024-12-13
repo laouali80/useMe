@@ -1,5 +1,14 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+import tw from "twrnc";
 
 const OnboardCards = [
   {
@@ -23,30 +32,40 @@ const OnboardCards = [
 ];
 const Onboarding = () => {
   return (
-    <SafeAreaView>
+    <View style={tw`bg-white h-full w-full`}>
       <TouchableOpacity
         onPress={() => navigation.navigate("HomeScreen")}
-        style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+        style={tw`bg-gray-950/50 absolute top-16 right-8 z-50 py-3 px-4 rounded-md shadow-lg`}
       >
-        <Icon name="menu" />
+        <Text style={tw`text-white`}>Skip</Text>
       </TouchableOpacity>
 
-      <View style={tw`h-1/2`}>
+      <View style={tw`h-[60%]`}>
         <Image
-          source={{}}
-          style={{ aspectRatio: 1, resizeMode: "cover", flex: 1 }}
+          source={require("../../assets/onboarding/stud1.webp")}
+          style={{ resizeMode: "cover", flex: 1 }}
         />
       </View>
-      <View style={tw`h-1/2`}>
-        <Text style={tw`text-center text-[]`}>Choose Your Destination</Text>
-        <Text>
+      <View style={tw`h-[40%] py-5 px-8`}>
+        <Text style={tw`text-center font-semibold text-2xl text-[#2358ea]`}>
+          Choose Your Destination
+        </Text>
+        <Text style={tw`text-gray-400 font-medium text-base text-center`}>
           With UseMe you can choose your destination from your location and
           expect a ride in less than 10 mins.
         </Text>
-        <Text>---</Text>
-        <Button title="Continue" style={{}} onPress={{}} />
+        <View style={tw`flex flex-row justify-center pt-4 gap-x-2`}>
+          <View style={tw`bg-orange-300 w-8 h-1`}></View>
+          <View style={tw`bg-slate-200 w-4 h-1`}></View>
+          <View style={tw`bg-slate-200 w-4 h-1`}></View>
+        </View>
+        <TouchableOpacity
+          style={tw`bg-[#2358ea] items-center mt-auto p-5 rounded-lg mb-2`}
+        >
+          <Text style={tw`text-white font-bold`}>Continue</Text>
+        </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
