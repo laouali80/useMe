@@ -109,9 +109,9 @@ const Onboarding = () => {
           {state.id === 3 ? (
             <TouchableOpacity
               onPress={_loginPage}
-              style={tw`bg-[#2358ea] items-center p-5 rounded-lg mb-2`}
+              style={tw` border border-[#2358ea] items-center p-5 rounded-lg mb-2`}
             >
-              <Text style={tw`text-white font-bold`}>Login</Text>
+              <Text style={tw`text-[#2358ea] font-bold`}>Login</Text>
             </TouchableOpacity>
           ) : null}
         </View>

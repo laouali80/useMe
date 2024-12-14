@@ -30,7 +30,7 @@ const HomeNavOptions = () => {
   const navigation = useNavigation();
 
   const _navigate = (screen) => {
-    console.log(navigation);
+    // console.log(na vigation);
     if (screen === "RideScreen") {
       navigation.navigate("Main");
     }
