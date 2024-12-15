@@ -17,8 +17,14 @@ import {
   Ionicons,
 } from "@expo/vector-icons";
 import tw from "twrnc";
+import { useNavigation } from "@react-navigation/native";
 
-const Signup = () => {
+const SignupScreen = () => {
+  const navigation = useNavigation();
+
+  const _loginPage = () => {
+    navigation.navigate("Login");
+  };
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
       <ScrollView style={tw`px-5 py-2`}>
@@ -131,10 +137,7 @@ const Signup = () => {
         <View style={tw`items-center my-2`}>
           <Text>
             Already have an account?
-            <Text
-              style={tw`text-[#5c89f4]`}
-              onPress={() => console.log("Sign In pressed")}
-            >
+            <Text style={tw`text-[#5c89f4]`} onPress={_loginPage}>
               Sign In
             </Text>
           </Text>
@@ -144,7 +147,7 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupScreen;
 
 const styles = StyleSheet.create({
   input: {

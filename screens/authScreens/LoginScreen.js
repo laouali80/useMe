@@ -16,8 +16,18 @@ import {
   SimpleLineIcons,
   Ionicons,
 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-const Login = () => {
+const LoginScreen = () => {
+  const navigation = useNavigation();
+
+  const _signUpPage = () => {
+    navigation.navigate("SignUp");
+  };
+  const _homePage = () => {
+    navigation.navigate("HomePage");
+  };
+
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
       <View style={tw`px-5 py-2`}>
@@ -73,6 +83,7 @@ const Login = () => {
         </View>
 
         <TouchableOpacity
+          onPress={_homePage}
           style={tw`bg-[#5c89f4] items-center p-5 rounded-lg mt-10`}
         >
           <Text style={tw`text-white font-bold`}>Login</Text>
@@ -81,10 +92,7 @@ const Login = () => {
         <View style={tw`items-center my-2`}>
           <Text>
             Don't have an account?
-            <Text
-              style={tw`text-[#5c89f4]`}
-              onPress={() => console.log("Sign In pressed")}
-            >
+            <Text style={tw`text-[#5c89f4]`} onPress={_signUpPage}>
               Create Account
             </Text>
           </Text>
@@ -94,6 +102,6 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginScreen;
 
 const styles = StyleSheet.create({});

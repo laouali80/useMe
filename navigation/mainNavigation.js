@@ -1,42 +1,36 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createStaticNavigation } from "@react-navigation/native";
+import Onboarding from "../screens/onboardingScreens/Onboarding";
+import LoginScreen from "../screens/authScreens/LoginScreen";
+import SignupScreen from "../screens/authScreens/SignupScreen";
+import HomeScreen from "../screens/homeScreen/HomeScreen";
+import MapScreen from "../screens/rideScreens/mapScreen";
 
 const mainNavigation = () => {
+  const mainNav = createNativeStackNavigator({
+    screenOptions: { gestureEnabled: false, headerShown: false },
+    screens: {
+      Ride: MapScreen,
+      // Shop: LoginScreen,
+      // SignUp: SignupScreen,
+      // HomePage: HomeScreen,
+    },
+  });
+
   const WelcomingNavigation = createNativeStackNavigator({
     screenOptions: { gestureEnabled: false, headerShown: false },
     initialRouteName: "Onboarding",
     screens: {
-      Onboarding: {
-        screen: AddContactScreen,
-        initialParams: {
-          handleSubmit: addContact,
-        },
-      },
-      Login: {
-        screen: ContactListScreen,
-        initialParams: {
-          contacts: contacts,
-          loading: loading,
-        },
-      },
-      SignUp: {
-        screen: ContactListScreen,
-        initialParams: {
-          contacts: contacts,
-          loading: loading,
-        },
-      },
+      Onboarding: Onboarding,
+      Login: LoginScreen,
+      SignUp: SignupScreen,
+      HomePage: HomeScreen,
+      Main: mainNav,
     },
   });
 
-  const switchNav = createStaticNavigation(SwitchNavigation);
-  return (
-    <View>
-      <Text>mainNavigation</Text>
-    </View>
-  );
+  const appNav = createStaticNavigation(WelcomingNavigation);
+  return appNav;
 };
 
 export default mainNavigation;
-
-const styles = StyleSheet.create({});

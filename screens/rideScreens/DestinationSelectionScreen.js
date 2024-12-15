@@ -7,8 +7,8 @@ import {
 } from "react-native";
 import React from "react";
 import tw from "twrnc";
-import { Icon } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
+import { Ionicons, Entypo, Feather } from "@expo/vector-icons";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 const DestinationSelectionScreen = () => {
@@ -49,6 +49,34 @@ const DestinationSelectionScreen = () => {
           />
         </View>
       </View> */}
+
+      {/* ORIGIN */}
+      <View
+        style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+      >
+        {/* <FontAwesome6 name="user" size={24} style={tw`mr-3 text-gray-500`} /> */}
+        <TextInput placeholder="From ?" style={tw`flex-1 font-semibold`} />
+        <Entypo name="cross" size={24} color="black" />
+      </View>
+
+      <View style={tw`flex flex-column justify-center pt-4 gap-y-1`}>
+        <View style={tw`bg-orange-300 w-2 h-2`}></View>
+        <View style={tw`bg-orange-300 w-2 h-3`}></View>
+        <View style={tw`bg-orange-300 w-2 h-2`}></View>
+      </View>
+
+      {/* DESTINATION */}
+      <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Last Name</Text>
+      <View
+        style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
+      >
+        {/* <FontAwesome6 name="user" size={24} style={tw`mr-3 text-gray-500`} /> */}
+        <TextInput
+          style={tw`flex-1 font-semibold`}
+          placeholder="Where are you going?"
+        />
+        <Entypo name="cross" size={24} color="black" />
+      </View>
 
       <View
         style={tw`flex flex-row justify-center bg-white py-2 mt-auto border-t border-gray-100 `}
