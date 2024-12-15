@@ -1,0 +1,56 @@
+import {
+  FlatList,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import React from "react";
+// import { productList } from "../../constants/ProductList";
+import { productList } from "../../constants/ProductList";
+
+const ProductCard = () => {
+  return (
+    <View>
+      <FlatList
+        data={productList}
+        numColumns={2}
+        columnWrapperStyle={{
+          justifyContent: "space-between",
+        }}
+        showsVerticalScrollIndicator={false}
+        renderItem={({ item }) => (
+          <Pressable
+            style={[
+              tw`bg-white`,
+              {
+                shadowColor: "#000",
+                shadowOffset: { width: 0, height: 4 },
+                shadowOpacity: 0.1,
+                shadowRadius: 7,
+                borderRadius: 16,
+                marginVertical: 16,
+                paddingHorizontal: 8,
+                paddingVertical: 26,
+              },
+            ]}
+          >
+            <Image
+              source={item.image}
+              style={{ width: 150, height: 150, resizeMode: "center" }}
+            />
+            <Text>{item.name}</Text>
+            <View>
+              <Text>{item.price}</Text>
+            </View>
+          </Pressable>
+        )}
+      />
+    </View>
+  );
+};
+
+export default ProductCard;
+
+const styles = StyleSheet.create({});
