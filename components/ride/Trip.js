@@ -2,7 +2,9 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import Rating from "../Rating";
 import tw from "twrnc";
-import { Icon } from "@rneui/themed";
+import { Ionicons, Entypo, Feather } from "@expo/vector-icons";
+// import Entypo from "@expo/vector-icons/Entypo";
+// import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Trip = ({ status }) => {
   return (
@@ -43,69 +45,86 @@ const Trip = ({ status }) => {
 
       {status !== "endTrip" ? (
         <View style={tw`flex flex-row justify-between bg-[#c8d6fd] p-5 my-5`}>
-          <View style={tw`flex flex-row`}>
+          <View style={tw`flex flex-row items-center`}>
             <Image
               style={[
-                tw`rounded-full`,
+                tw`rounded-full mr-1`,
                 {
                   width: 50,
                   height: 50,
-                  resizeMode: "contain",
+                  resizeMode: "cover",
                   // objectFit: "contain",
                 },
               ]}
               source={require("../../assets/profile/prof1.jpg")}
               // source={{uri: item.image}}
             />
-            <View style={tw`flex flex-column justify-between`}>
+            <View style={tw`flex flex-column justify-between gap-y-1`}>
               <Text>Salaman</Text>
-              <Rating value={5} />
+              <Rating value={3.8} />
               <Text>07031100411</Text>
             </View>
           </View>
           <View style={tw`flex flex-column justify-between `}>
             <View>
-              <Text style={tw`text-[#5c89f4] text-center`}>N500</Text>
+              <Text
+                style={tw`text-[#2158e9] text-center font-semibold text-2xl`}
+              >
+                N500
+              </Text>
             </View>
-            <View>
+            <View style={tw`flex flex-row items-center`}>
               <Text>Wallet payment</Text>
+              <Entypo name="chevron-down" size={24} color="black" />
             </View>
           </View>
         </View>
       ) : (
-        <View style={tw`flex flex-row justify-between bg-[#c8d6fd] p-5 my-5`}>
-          <Text>Amount:</Text>
+        <View
+          style={tw`flex flex-row justify-between items-center bg-[#c8d6fd] p-5 my-5`}
+        >
+          <Text style={tw`font-semibold text-xl`}>Amount:</Text>
 
-          <Text style={tw`text-[#5c89f4]`}>N500</Text>
+          <Text style={tw`text-[#2158e9] font-semibold text-xl`}>N500</Text>
         </View>
       )}
 
       {status === "approaching" || status === "arrived" ? (
-        <View>
-          <View style={tw`flex flex-column`}>
-            <View>
-              <Icon name="xmark" size={25} color="red" type="font-awesome" />
-            </View>
-            <Text>Cancel Ride</Text>
+        <View style={tw`flex flex-row justify-center gap-x-8 py-6 `}>
+          <View style={tw`flex items-center`}>
+            <TouchableOpacity
+              style={tw`items-center justify-center bg-red-200 rounded-full w-10 h-10`}
+            >
+              <Entypo name="cross" size={24} color="black" />
+            </TouchableOpacity>
+            <Text style={tw`text-center`}>Cancel Rid</Text>
           </View>
-          <View style={tw`flex flex-column`}>
-            <Text>Icon</Text>
-            <Text>Chat</Text>
+          <View style={tw`flex items-center`}>
+            <TouchableOpacity
+              style={tw`items-center justify-center bg-blue-200 rounded-full w-10 h-10`}
+            >
+              <Ionicons name="chatbox-outline" size={24} color="black" />
+            </TouchableOpacity>
+            <Text style={tw`text-center`}>Chat</Text>
           </View>
-          <View style={tw`flex flex-column`}>
-            <Text>Icon</Text>
-            <Text>Call</Text>
+          <View style={tw`flex items-center`}>
+            <TouchableOpacity
+              style={tw`items-center justify-center bg-green-200 rounded-full w-10 h-10`}
+            >
+              <Feather name="phone-call" size={24} color="black" />
+            </TouchableOpacity>
+            <Text style={tw`text-center`}>Call</Text>
           </View>
         </View>
       ) : null}
 
       {status === "endTrip" ? (
-        <View style={tw`flex flex-column`}>
-          <Text style={tw`text-center py-5 text-xl text-[#5c89f4]`}>
+        <View style={tw`flex flex-column justify-center`}>
+          <Text style={tw`text-center py-5 text-xl `}>
             Please rate this trip
           </Text>
-          <TouchableOpacity>
-            <Rating value={0} />
+          <TouchableOpacity style={tw`items-center`}>
+            <Rating value={0} size={50} color="grey" />
           </TouchableOpacity>
         </View>
       ) : null}
@@ -120,7 +139,7 @@ const Trip = ({ status }) => {
             Your Keke is here
           </Text>
         ) : status === "enroute" ? (
-          <Text style={tw`text-center py-5 text-xl text-[#5c89f4]`}>
+          <Text style={tw`text-center py-5 mt-25 text-xl text-[#5c89f4]`}>
             Enroute Location.
           </Text>
         ) : null}
