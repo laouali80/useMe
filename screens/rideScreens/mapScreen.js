@@ -3,7 +3,6 @@ import React from "react";
 import tw from "twrnc";
 import Map from "../../components/ride/Map";
 import { createStackNavigator } from "@react-navigation/stack";
-
 import DestinationSelectionScreen from "./DestinationSelectionScreen";
 import RideOptionsScreen from "./RideOptionsScreen";
 import TripScreen from "./TripScreen";

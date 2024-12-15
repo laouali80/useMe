@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-// import { Icon } from "react-native-elements";
 import { FontAwesome } from "@expo/vector-icons";
 import tw from "twrnc";
 

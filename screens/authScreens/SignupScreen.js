@@ -1,5 +1,6 @@
 import {
   Button,
+  Platform,
   Pressable,
   SafeAreaView,
   ScrollView,
@@ -27,7 +28,7 @@ const SignupScreen = () => {
   };
   return (
     <SafeAreaView style={tw`bg-white h-full w-full`}>
-      <ScrollView style={tw`px-5 py-2`}>
+      <ScrollView style={tw`px-5 py-${Platform.OS === "ios" ? "2" : "10"}`}>
         <Text style={tw`text-[#5c89f4] font-bold text-2xl mb-1`}>UseMe.</Text>
         <Text style={tw`text-gray-400 font-semibold text-xl mb-8`}>
           Create your UseMe account.
