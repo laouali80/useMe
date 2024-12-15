@@ -70,7 +70,7 @@ const Onboarding = () => {
         />
       </View>
       <View style={tw`h-[40%] py-5 px-8`}>
-        <Text style={tw`text-center font-semibold text-2xl text-[#2358ea]`}>
+        <Text style={tw`text-center font-semibold text-xl text-[#2358ea]`}>
           {/* Choose Your Destination */}
           {state.title}
         </Text>

@@ -38,15 +38,16 @@ const HomeNavOptions = () => {
 
   return (
     <View>
-      <Text>Select !</Text>
+      <Text style={tw`text-xl font-bold mb-4`}>Select !</Text>
       <FlatList
         data={data}
         horizontal
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => _navigate(item.screen)}
-            style={tw`p-2 pl-6 pb-8 pt-4 bg-white m-2 w-40`}
+            style={tw`pl-4 pb-8 pt-4 bg-white m-2 w-40`}
           >
             <View>
               <Image
