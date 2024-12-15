@@ -1,25 +1,26 @@
 import {
-  Pressable,
+  Platform,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
+  useColorScheme,
   View,
 } from "react-native";
 import React from "react";
-import { COLORS } from "../../constants/COLORS";
 import tw from "twrnc";
-import {
-  FontAwesome6,
-  MaterialCommunityIcons,
-  SimpleLineIcons,
-  Ionicons,
-} from "@expo/vector-icons";
+import { SimpleLineIcons, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen = () => {
   const navigation = useNavigation();
+
+  const colorScheme = useColorScheme(); // Detects light or dark mode
+
+  const isDarkMode = colorScheme === "dark";
+  const statusBarStyle = isDarkMode ? "light-content" : "dark-content";
 
   const _signUpPage = () => {
     navigation.navigate("SignUp");
@@ -29,10 +30,20 @@ const LoginScreen = () => {
   };
 
   return (
-    <SafeAreaView style={tw`bg-white h-full w-full`}>
-      <View style={tw`px-5 py-2`}>
+    <SafeAreaView
+      style={[
+        tw`bg-white h-full w-full`,
+        { backgroundColor: isDarkMode ? "#000" : "#fff" },
+      ]}
+    >
+      {/* Status Bar */}
+      {/* <StatusBar
+        barStyle={statusBarStyle}
+        backgroundColor={isDarkMode ? "#000" : "#fff"}
+        translucent={true}
+      /> */}
+      <View style={tw`px-5 py-${Platform.OS === "ios" ? "2" : "10"}`}>
         <Text style={tw`text-[#5c89f4] font-bold text-2xl mb-1`}>UseMe.</Text>
-
         <Text style={tw`font-bold text-2xl mt-6`}>Welcome to UseMe.</Text>
         <Text style={tw`text-gray-400 font-semibold text-xl mb-20`}>
           Fill your details below to login into your UseMe account.
@@ -53,13 +64,14 @@ const LoginScreen = () => {
           <TextInput
             style={tw`flex-1 font-semibold`}
             placeholder="Enter your phone number"
+            placeholderTextColor={isDarkMode ? "#ccc" : "#666"}
           />
         </View>
 
         {/* PIN */}
         <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Pin</Text>
         <View
-          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg `}
+          style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg`}
         >
           <Ionicons
             name="bag-outline"
@@ -69,6 +81,7 @@ const LoginScreen = () => {
           <TextInput
             style={tw`flex-1 font-semibold`}
             placeholder="Enter Pin"
+            placeholderTextColor={isDarkMode ? "#ccc" : "#666"}
             secureTextEntry={true}
             autoCapitalize="none"
           />

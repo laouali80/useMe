@@ -3,12 +3,13 @@ import React from "react";
 import Rating from "../Rating";
 import tw from "twrnc";
 import { Ionicons, Entypo, Feather } from "@expo/vector-icons";
+import { ScrollView } from "react-native-gesture-handler";
 // import Entypo from "@expo/vector-icons/Entypo";
 // import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Trip = ({ status }) => {
   return (
-    <View style={tw`py-1 px-5`}>
+    <ScrollView style={tw`py-1 px-5`}>
       <View
         style={{
           flexDirection: "row",
@@ -131,20 +132,20 @@ const Trip = ({ status }) => {
 
       <View>
         {status === "approaching" ? (
-          <Text style={tw`text-center py-5 text-xl text-[#5c89f4]`}>
+          <Text style={tw`text-center mt-auto text-xl text-[#5c89f4]`}>
             Rider is Approaching...
           </Text>
         ) : status === "arrived" ? (
-          <Text style={tw`text-center py-5 text-xl text-[#5c89f4]`}>
+          <Text style={tw`text-center mt-auto text-xl text-[#5c89f4]`}>
             Your Keke is here
           </Text>
         ) : status === "enroute" ? (
-          <Text style={tw`text-center py-5 mt-25 text-xl text-[#5c89f4]`}>
+          <Text style={tw`text-center mt-auto mt-25 text-xl text-[#5c89f4]`}>
             Enroute Location.
           </Text>
         ) : null}
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
