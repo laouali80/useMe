@@ -9,3 +9,5 @@ https://www.flaticon.com/free-icon/tricycle_2975537
 https://www.svgrepo.com/svg/408291/car-white
 
 https://icons.expo.fyi/Index
+
+https://www.shutterstock.com/search/african-student-on-phone
