@@ -30,9 +30,12 @@ const HomeNavOptions = () => {
   const navigation = useNavigation();
 
   const _navigate = (screen) => {
-    // console.log(na vigation);
     if (screen === "RideScreen") {
-      navigation.navigate("Main");
+      navigation.navigate("Main", { screen: "Ride" }); // Navigate to the Ride screen inside Main
+    } else if (screen === "ShopScreen") {
+      navigation.navigate("Main", { screen: "Shop" }); // Navigate to the Shop screen inside Main
+    } else {
+      console.warn("Screen not found!");
     }
   };
 

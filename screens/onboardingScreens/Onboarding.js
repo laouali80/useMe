@@ -115,12 +115,6 @@ const Onboarding = () => {
             </TouchableOpacity>
           ) : null}
         </View>
-        {/* <TouchableOpacity
-          onPress={nextBoard}
-          style={tw`bg-[#2358ea] items-center p-5 rounded-lg mb-2`}
-        >
-          <Text style={tw`text-white font-bold`}>Continue</Text>
-        </TouchableOpacity> */}
       </View>
     </View>
   );
