@@ -5,13 +5,14 @@ import LoginScreen from "../screens/authScreens/LoginScreen";
 import SignupScreen from "../screens/authScreens/SignupScreen";
 import HomeScreen from "../screens/homeScreen/HomeScreen";
 import MapScreen from "../screens/rideScreens/mapScreen";
+import CategoriesDisplaySreen from "../screens/shopScreens/CategoriesDisplaySreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
     screenOptions: { gestureEnabled: false, headerShown: false },
     screens: {
       Ride: MapScreen,
-      // Shop: LoginScreen,
+      Shop: CategoriesDisplaySreen,
       // SignUp: SignupScreen,
       // HomePage: HomeScreen,
     },
