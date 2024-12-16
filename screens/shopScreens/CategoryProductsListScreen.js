@@ -1,7 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import CategoriesFilter from "../../components/shop/CategoriesFilter";
 import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
 
 const CategoryProductsListScreen = () => {
   const navigation = useNavigation();
