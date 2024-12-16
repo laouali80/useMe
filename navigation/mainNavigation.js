@@ -6,6 +6,7 @@ import SignupScreen from "../screens/authScreens/SignupScreen";
 import HomeScreen from "../screens/homeScreen/HomeScreen";
 import MapScreen from "../screens/rideScreens/mapScreen";
 import CategoriesDisplaySreen from "../screens/shopScreens/CategoriesDisplaySreen";
+import CategoryProductsListScreen from "../screens/shopScreens/CategoryProductsListScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
@@ -13,7 +14,7 @@ const mainNavigation = () => {
     screens: {
       Ride: MapScreen,
       Shop: CategoriesDisplaySreen,
-      // SignUp: SignupScreen,
+      ProductsList: CategoryProductsListScreen,
       // HomePage: HomeScreen,
     },
   });
