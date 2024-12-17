@@ -10,6 +10,7 @@ import tw from "twrnc";
 import Rating from "../Rating";
 import ReviewMessage from "./ReviewMessage";
 import { FontAwesome6, Ionicons, SimpleLineIcons } from "@expo/vector-icons";
+import { COLORS } from "../../constants/COLORS";
 
 const Review = () => {
   return (
@@ -22,7 +23,7 @@ const Review = () => {
       <ReviewMessage />
       <ReviewMessage
         color="blue"
-        bg="deepGray"
+        bg={COLORS.deepGray}
         bold={"bold"}
         children={"NO REVIEW"}
       />
@@ -31,7 +32,7 @@ const Review = () => {
       <View
         style={{
           padding: 3,
-          backgroundColor: "deepgrey",
+          backgroundColor: COLORS.deepGray,
           marginTop: 5,
           borderRadius: 5,
         }}

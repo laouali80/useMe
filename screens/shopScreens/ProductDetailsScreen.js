@@ -1,17 +1,18 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useState } from "react";
 import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";
-import {
-  productDetails,
-  rating,
-  ratingRow,
-  ratingText,
-  titleRow,
-  upperRow,
-} from "../../constants/STYLES";
+import stylesProductDetails from "../../constants/stylesProductDetails";
 import Rating from "../../components/Rating";
 import Review from "../../components/shop/Review";
+import tw from "twrnc";
 
 const ProductDetailsScreen = () => {
   const navigation = useNavigation();
@@ -26,8 +27,8 @@ const ProductDetailsScreen = () => {
     if (count > 1) setCount(count - 1);
   };
   return (
-    <View>
-      <View style={upperRow}>
+    <ScrollView>
+      <View style={stylesProductDetails.upperRow}>
         {/* back icon  */}
         <TouchableOpacity onPress={() => navigation.navigate.goBack()}>
           <Ionicons name="chevron-back-circle" size={30} />
@@ -46,28 +47,28 @@ const ProductDetailsScreen = () => {
       />
 
       {/* Product Title and Price  */}
-      <View style={productDetails}>
-        <View style={titleRow}>
-          <Text style={title}>Product</Text>
-          <View style={priceWapper}>
-            <Text style={price}>Price</Text>
+      <View style={stylesProductDetails.productDetails}>
+        <View style={stylesProductDetails.titleRow}>
+          <Text style={stylesProductDetails.title}>Product</Text>
+          <View style={stylesProductDetails.priceWrapper}>
+            <Text style={stylesProductDetails.price}>Price</Text>
           </View>
         </View>
       </View>
 
       {/* Product rating and Qty */}
-      <View style={ratingRow}>
-        <View style={rating}>
+      <View style={stylesProductDetails.ratingRow}>
+        <View style={stylesProductDetails.rating}>
           <Rating value={4.9} />
-          <Text style={ratingText}> (4.9)</Text>
+          <Text style={stylesProductDetails.ratingText}> (4.9)</Text>
         </View>
 
-        <View style={rating}>
+        <View style={stylesProductDetails.rating}>
           <TouchableOpacity onPress={increment}>
             <SimpleLineIcons name="plus" size={20} />
           </TouchableOpacity>
 
-          <Text style={ratingText}> 1 </Text>
+          <Text style={stylesProductDetails.ratingText}> 1 </Text>
 
           <TouchableOpacity onPress={decrement}>
             <SimpleLineIcons name="minus" size={20} />
@@ -87,10 +88,8 @@ const ProductDetailsScreen = () => {
         {/* Product Review */}
         <Review />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
 export default ProductDetailsScreen;
-
-const styles = StyleSheet.create({});
