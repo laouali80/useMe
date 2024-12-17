@@ -1,14 +1,46 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import CategoriesFilter from "../../components/shop/CategoriesFilter";
+import { useNavigation } from "@react-navigation/native";
+import tw from "twrnc";
+import { Ionicons } from "@expo/vector-icons";
+import ProductCard from "../../components/shop/ProductCard";
 
 const CategoryProductsListScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={tw`bg-[#fafbff] h-full w-full`}>
-      <View style={tw`flex flex-row justify-between`}>
-        <Text>menu</Text>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        {/* Return to homepaga */}
+        <TouchableOpacity
+          onPress={() => navigation.navigate("HomeScreen")}
+          style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+        >
+          <Ionicons name="menu" size={24} color="black" />
+        </TouchableOpacity>
+
+        {/* Search bar */}
         <Text>search</Text>
-        <Text>profile</Text>
+
+        {/* Profil Icon  */}
+        <TouchableOpacity
+          onPress={() => navigation.navigate("HomeScreen")}
+          style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+        >
+          <Ionicons name="menu" size={24} color="black" />
+        </TouchableOpacity>
       </View>
 
       {/* Categories filter */}

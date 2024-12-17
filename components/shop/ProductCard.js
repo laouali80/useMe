@@ -9,8 +9,11 @@ import {
 import React from "react";
 // import { productList } from "../../constants/ProductList";
 import { productList } from "../../constants/ProductList";
+import tw from "twrnc";
+import { useNavigation } from "@react-navigation/core";
 
 const ProductCard = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <FlatList
@@ -22,6 +25,9 @@ const ProductCard = () => {
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <Pressable
+            onPress={() => {
+              navigation.navigate("ProductDetails");
+            }}
             style={[
               tw`bg-white`,
               {
@@ -40,7 +46,7 @@ const ProductCard = () => {
               source={item.image}
               style={{ width: 150, height: 150, resizeMode: "center" }}
             />
-            <Text>{item.name}</Text>
+            <Text>{item.title}</Text>
             <View>
               <Text>{item.price}</Text>
             </View>

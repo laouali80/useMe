@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { categories } from "../../constants/Categories";
+import tw from "twrnc";
 
 const CategoriesFilter = () => {
   return (
