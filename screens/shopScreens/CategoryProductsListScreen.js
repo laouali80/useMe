@@ -8,7 +8,9 @@ import {
 import React from "react";
 import CategoriesFilter from "../../components/shop/CategoriesFilter";
 import { useNavigation } from "@react-navigation/native";
+import tw from "twrnc";
 import { Ionicons } from "@expo/vector-icons";
+import ProductCard from "../../components/shop/ProductCard";
 
 const CategoryProductsListScreen = () => {
   const navigation = useNavigation();
