@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import MapView, { PROVIDER_GOOGLE, MapMarker, Marker } from "react-native-maps";
+// import MapView, { PROVIDER_GOOGLE, MapMarker, Marker } from "react-native-maps";
 
 const Map = () => {
   return (
@@ -15,12 +15,12 @@ const Map = () => {
       }}
       mapType="mutedStandard" // to muted or reduce the information on the map
     >
-      <Marker
+      {/* <Marker
         title="Origin"
         description={{}}
         identifier="origin"
         coordinate={{}}
-      />
+      /> */}
     </MapView>
   );
 };

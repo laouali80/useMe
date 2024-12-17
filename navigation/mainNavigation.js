@@ -7,6 +7,7 @@ import HomeScreen from "../screens/homeScreen/HomeScreen";
 import MapScreen from "../screens/rideScreens/mapScreen";
 import CategoriesDisplaySreen from "../screens/shopScreens/CategoriesDisplaySreen";
 import CategoryProductsListScreen from "../screens/shopScreens/CategoryProductsListScreen";
+import ProductDetailsScreen from "../screens/shopScreens/ProductDetailsScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
@@ -15,7 +16,7 @@ const mainNavigation = () => {
       Ride: MapScreen,
       Shop: CategoriesDisplaySreen,
       ProductsList: CategoryProductsListScreen,
-      // HomePage: HomeScreen,
+      ProductDetails: ProductDetailsScreen,
     },
   });
 

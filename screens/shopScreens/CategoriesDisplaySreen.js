@@ -76,7 +76,7 @@ const CategoriesDisplaySreen = () => {
               }}
               style={tw`text-white`}
             >
-              See All
+              <Text>See All</Text>
             </Pressable>
           </View>
 
