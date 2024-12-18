@@ -3,6 +3,12 @@ export const COLORS = {
   secondary: "",
   tertiary: "",
 
+  offwhite: "#83829A",
+  white: "#FFFFFF",
+  black: "#000000",
+
+  deepGray: "#686868",
+
   c2: "#fafbff", //(Light off-white)
   c3: "#000000", //(Black)
   c4: "#ededed", //(Light gray)

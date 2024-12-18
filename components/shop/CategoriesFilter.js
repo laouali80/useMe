@@ -10,6 +10,7 @@ const CategoriesFilter = () => {
         {categories.map((category, index) => {
           return (
             <View
+              key={category.id}
               style={[
                 tw`${index === 1 ? "bg-orange-300" : "bg-white"}`,
                 {

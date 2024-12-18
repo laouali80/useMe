@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     position: "absolute",
-    width: 44, // xxlarge
+    width: 44 - 44, // xxlarge
     top: 25, // width
     zIndex: 999,
   },
