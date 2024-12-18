@@ -23,6 +23,7 @@ const ProductCard = () => {
           justifyContent: "space-between",
         }}
         showsVerticalScrollIndicator={false}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
             onPress={() => {
