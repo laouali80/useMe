@@ -13,3 +13,6 @@ https://www.svgrepo.com/svg/408291/car-white
 https://icons.expo.fyi/Index
 
 https://www.shutterstock.com/search/african-student-on-phone
+
+https://www.npmjs.com/package/react-native-swipe-list-view
+https://reactnativeelements.com/docs/components/listitem_swipeable

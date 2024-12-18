@@ -8,15 +8,42 @@ import MapScreen from "../screens/rideScreens/mapScreen";
 import CategoriesDisplaySreen from "../screens/shopScreens/CategoriesDisplaySreen";
 import CategoryProductsListScreen from "../screens/shopScreens/CategoryProductsListScreen";
 import ProductDetailsScreen from "../screens/shopScreens/ProductDetailsScreen";
+import CartScreen from "../screens/shopScreens/CartScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
-    screenOptions: { gestureEnabled: false, headerShown: false },
+    screenOptions: { gestureEnabled: true },
     screens: {
-      Ride: MapScreen,
-      Shop: CategoriesDisplaySreen,
-      ProductsList: CategoryProductsListScreen,
-      ProductDetails: ProductDetailsScreen,
+      Ride: {
+        screen: MapScreen,
+        options: {
+          headerShown: false,
+        },
+      },
+      Shop: {
+        screen: CategoriesDisplaySreen,
+        options: {
+          headerShown: false,
+        },
+      },
+      ProductsList: {
+        screen: CategoryProductsListScreen,
+        options: {
+          headerShown: false,
+        },
+      },
+      ProductDetails: {
+        screen: ProductDetailsScreen,
+        options: {
+          headerShown: false,
+        },
+      },
+      Cart: {
+        screen: CartScreen,
+        options: {
+          headerShown: true,
+        },
+      },
     },
   });
 

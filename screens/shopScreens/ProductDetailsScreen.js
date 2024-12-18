@@ -35,7 +35,7 @@ const ProductDetailsScreen = () => {
         </TouchableOpacity>
 
         {/* heart icon (favorite) */}
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
           <Ionicons name="heart" color={{}} />
         </TouchableOpacity>
       </View>
