@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import tw from "twrnc";
 
-const header = () => {
+const Header = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ flexDirection: "row" }}>
       <TouchableOpacity
-        // onPress={() => navigation.navigate("HomeScreen")}
+        onPress={() => navigation.goBack()}
         style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
       >
         <Ionicons name="menu" size={24} color="black" />
@@ -21,7 +25,7 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
 
 const styles = StyleSheet.create({
   upperRow: {
