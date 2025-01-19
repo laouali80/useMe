@@ -3,9 +3,20 @@ import React from "react";
 
 const header = () => {
   return (
-    <View style={{ flexDirection: "row", marginHorizontal: 16 }}>
-      <Text style={{ flex: 1 }}>backbtn</Text>
-      <Text>user</Text>
+    <View style={{ flexDirection: "row" }}>
+      <TouchableOpacity
+        // onPress={() => navigation.navigate("HomeScreen")}
+        style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+      >
+        <Ionicons name="menu" size={24} color="black" />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        // onPress={() => navigation.navigate("HomeScreen")}
+        style={tw`bg-gray-100 absolute top-16 right-8 z-50 p-3 rounded-full shadow-lg`}
+      >
+        <Ionicons name="menu" size={24} color="black" />
+      </TouchableOpacity>
     </View>
   );
 };
