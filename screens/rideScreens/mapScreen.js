@@ -7,14 +7,17 @@ import DestinationSelectionScreen from "./DestinationSelectionScreen";
 import RideOptionsScreen from "./RideOptionsScreen";
 import TripScreen from "./TripScreen";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import Header from "../../components/share/Header";
 
 const MapScreen = () => {
   const Stack = createStackNavigator();
-
+  // const navigation = useNavigation();
   return (
     <View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("HomeScreen")}
+      <Header />
+      {/* <TouchableOpacity
+        onPress={() => navigation.goBack()}
         style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
       >
         <Ionicons name="menu" size={24} color="black" />
@@ -25,7 +28,7 @@ const MapScreen = () => {
         style={tw`bg-gray-100 absolute top-16 right-8 z-50 p-3 rounded-full shadow-lg`}
       >
         <Ionicons name="menu" size={24} color="black" />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <View style={tw`h-1/2`}>
         <Map />
       </View>
