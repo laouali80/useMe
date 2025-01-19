@@ -76,7 +76,7 @@ const CartItems = () => {
           style={tw`bg-[#2358ea] items-center p-2 rounded-lg mt-8`}
         >
           <Text style={tw`text-white font-bold text-base`}>
-            Checkout {"N1500"}
+            All Checkout {"N1500"}
           </Text>
         </TouchableOpacity>
       </View>
