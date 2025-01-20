@@ -11,16 +11,24 @@ import Rating from "../Rating";
 import ReviewMessage from "./ReviewMessage";
 import { FontAwesome6, Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { COLORS } from "../../constants/COLORS";
+import stylesProductDetails from "../../constants/stylesProductDetails";
 
 const Review = () => {
   return (
-    <View style={tw`my-9`}>
-      <Text style={{ fontFamily: "bold", fontSize: 15, marginBottom: 2 }}>
+    <View style={stylesProductDetails.reviewWrapper}>
+      <Text
+        style={{
+          fontFamily: "bold",
+          fontSize: 15,
+          marginBottom: 4,
+          padding: 4,
+        }}
+      >
         REVIEW
       </Text>
 
       {/* IF THERE IS NO REVIEW  */}
-      <ReviewMessage />
+      {/* <ReviewMessage /> */}
       <ReviewMessage
         color="blue"
         bg={COLORS.deepGray}
@@ -31,14 +39,14 @@ const Review = () => {
       {/* REVIEW  */}
       <View
         style={{
-          padding: 3,
+          padding: 10,
           backgroundColor: COLORS.deepGray,
-          marginTop: 5,
+          marginTop: 20,
           borderRadius: 5,
         }}
       >
         <Text style={{ fontSize: 15, color: "black" }}>User Doe</Text>
-        <Rating value={4} />
+        <Rating value={4} color="gold" />
         <Text style={{ marginBottom: 3, color: "grey" }}>Jan 12 2022</Text>
         <ReviewMessage
           color="black"
@@ -56,7 +64,7 @@ const Review = () => {
           REVIEW THIS PRODUCT
         </Text>
 
-        <Text style={tw`text-gray-500 font-bold text-lg mb-1`}>Rating</Text>
+        <Text style={tw`text-gray-500 font-bold text-lg mb-1 `}>Rating</Text>
         <View
           style={tw`flex flex-row items-center bg-[#edf0ff] p-3 rounded-lg mb-5`}
         >

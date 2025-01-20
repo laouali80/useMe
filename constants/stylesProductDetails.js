@@ -18,15 +18,15 @@ export default stylesProductDetails = StyleSheet.create({
     marginTop: -SIZES.large,
     backgroundColor: "",
     width: SIZES.width,
-    borderTopLeftRadius: SIZES.mediun,
-    borderTopRightRadius: SIZES.mediun,
+    borderTopLeftRadius: SIZES.medium,
+    borderTopRightRadius: SIZES.medium,
   },
 
   titleRow: {
     marginHorizontal: 20,
     paddingBottom: SIZES.small,
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     width: SIZES.width - 44,
     top: 20,
   },
@@ -47,10 +47,9 @@ export default stylesProductDetails = StyleSheet.create({
   },
 
   ratingRow: {
-    marginHorizontal: 20,
     paddingBottom: SIZES.small,
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     width: SIZES.width - 10,
     top: 5,
   },
@@ -75,7 +74,7 @@ export default stylesProductDetails = StyleSheet.create({
 
   description: {
     fontFamily: "medium",
-    fontSize: SIZES.large,
+    fontSize: SIZES.large - 2,
   },
 
   descText: {
@@ -83,5 +82,15 @@ export default stylesProductDetails = StyleSheet.create({
     fontSize: SIZES.small,
     textAlign: "justify",
     marginBottom: SIZES.small,
+  },
+
+  reviewWrapper: {
+    marginTop: SIZES.large * 2,
+    marginHorizontal: SIZES.large,
+  },
+
+  addCartWrapper: {
+    marginTop: SIZES.large * 2,
+    marginHorizontal: SIZES.large,
   },
 });

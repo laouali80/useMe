@@ -30,13 +30,19 @@ const ProductDetailsScreen = () => {
     <ScrollView>
       <View style={stylesProductDetails.upperRow}>
         {/* back icon  */}
-        <TouchableOpacity onPress={() => navigation.navigate.goBack()}>
+        <TouchableOpacity
+          onPress={() => navigate.goBack()}
+          style={tw`bg-gray-100  p-1 rounded-full opacity-75`}
+        >
           <Ionicons name="chevron-back-circle" size={30} />
         </TouchableOpacity>
 
         {/* heart icon (favorite) */}
-        <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
-          <Ionicons name="heart" color={{}} />
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Cart")}
+          style={tw`bg-gray-100  p-1 rounded-full opacity-75`}
+        >
+          <Ionicons name="heart" size={30} />
         </TouchableOpacity>
       </View>
 
@@ -51,35 +57,42 @@ const ProductDetailsScreen = () => {
         <View style={stylesProductDetails.titleRow}>
           <Text style={stylesProductDetails.title}>Product</Text>
           <View style={stylesProductDetails.priceWrapper}>
-            <Text style={stylesProductDetails.price}>Price</Text>
+            <Text style={stylesProductDetails.price}>N 1500</Text>
           </View>
         </View>
-      </View>
 
-      {/* Product rating and Qty */}
-      <View style={stylesProductDetails.ratingRow}>
-        <View style={stylesProductDetails.rating}>
-          <Rating value={4.9} />
-          <Text style={stylesProductDetails.ratingText}> (4.9)</Text>
+        {/* Product rating and Qty */}
+        <View style={stylesProductDetails.ratingRow}>
+          <View style={stylesProductDetails.rating}>
+            <Rating value={4.9} size={24} color="gold" />
+            <Text style={stylesProductDetails.ratingText}> (4.9)</Text>
+          </View>
+
+          <View style={stylesProductDetails.rating}>
+            <TouchableOpacity onPress={increment}>
+              <SimpleLineIcons name="plus" size={20} />
+            </TouchableOpacity>
+
+            <Text style={stylesProductDetails.ratingText}> {count} </Text>
+
+            <TouchableOpacity onPress={decrement}>
+              <SimpleLineIcons name="minus" size={20} />
+            </TouchableOpacity>
+          </View>
         </View>
 
-        <View style={stylesProductDetails.rating}>
-          <TouchableOpacity onPress={increment}>
-            <SimpleLineIcons name="plus" size={20} />
-          </TouchableOpacity>
-
-          <Text style={stylesProductDetails.ratingText}> 1 </Text>
-
-          <TouchableOpacity onPress={decrement}>
-            <SimpleLineIcons name="minus" size={20} />
-          </TouchableOpacity>
+        <View style={stylesProductDetails.descriptionWrapper}>
+          <Text style={stylesProductDetails.description}>Description</Text>
+          <Text style={stylesProductDetails.descText}>
+            sdffgggjknjjbvjbjdjdbbf Lorem*58
+          </Text>
         </View>
 
         {/* Add to Cart button */}
-        <View style={{}}>
+        <View style={stylesProductDetails.addCartWrapper}>
           <TouchableOpacity
             onPress={() => {}}
-            style={tw`bg-[#2358ea] items-center p-5 rounded-lg mb-2`}
+            style={tw`bg-[#2358ea] items-center p-5 rounded-full mb-2`}
           >
             <Text style={tw`text-white font-bold`}>ADD TO CART</Text>
           </TouchableOpacity>
