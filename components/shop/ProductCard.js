@@ -21,6 +21,7 @@ const ProductCard = () => {
         numColumns={2}
         columnWrapperStyle={{
           justifyContent: "space-between",
+          // paddingHorizontal: 10,
         }}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => item.id}
@@ -38,6 +39,7 @@ const ProductCard = () => {
                 shadowRadius: 7,
                 borderRadius: 16,
                 marginVertical: 16,
+                alignItems: "center",
                 paddingHorizontal: 8,
                 paddingVertical: 26,
               },

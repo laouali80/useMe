@@ -5,7 +5,13 @@ const ReviewMessage = ({ bg, color, children, size, bold }) => {
   return (
     <View style={{ backgroundColor: bg, padding: 4, borderRadius: 5 }}>
       <Text
-        style={{ color: color, fontSize: size, fontFamily: bold || "normal" }}
+        style={{
+          color: color,
+          fontSize: size,
+          fontFamily: bold || "normal",
+          padding: 8,
+          textAlign: "center",
+        }}
       >
         {children}
       </Text>
