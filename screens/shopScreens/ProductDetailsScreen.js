@@ -31,7 +31,7 @@ const ProductDetailsScreen = () => {
       <View style={stylesProductDetails.upperRow}>
         {/* back icon  */}
         <TouchableOpacity
-          onPress={() => navigate.goBack()}
+          onPress={() => navigation.goBack()}
           style={tw`bg-gray-100  p-1 rounded-full opacity-75`}
         >
           <Ionicons name="chevron-back-circle" size={30} />

@@ -10,8 +10,10 @@ import React from "react";
 import { items } from "../../mockData/cartItems";
 import tw from "twrnc";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const CartItems = () => {
+  const navigation = useNavigation();
   return (
     <View style={tw`p-4`}>
       <FlatList
@@ -44,6 +46,7 @@ const CartItems = () => {
               {/* Checkout Button */}
               <TouchableOpacity
                 style={tw`bg-[#2358ea] py-[1] px-[8] rounded-lg mt-2`}
+                onPress={() => navigation.navigate("DeliveryInfo")}
               >
                 <Text style={tw`text-white font-semibold`}>CHECKOUT</Text>
               </TouchableOpacity>
@@ -74,6 +77,7 @@ const CartItems = () => {
         {/* Checkout Button */}
         <TouchableOpacity
           style={tw`bg-[#2358ea] items-center p-2 rounded-lg mt-8`}
+          onPress={() => navigation.navigate("DeliveryInfo")}
         >
           <Text style={tw`text-white font-bold text-base`}>
             All Checkout {"N1500"}
