@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import React, { useState } from "react";
-import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
+import { FontAwesome, Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";
 import stylesProductDetails from "../../constants/stylesProductDetails";
 import Rating from "../../components/Rating";
@@ -31,7 +31,7 @@ const ProductDetailsScreen = () => {
       <View style={stylesProductDetails.upperRow}>
         {/* back icon  */}
         <TouchableOpacity
-          onPress={() => navigate.goBack()}
+          onPress={() => navigation.goBack()}
           style={tw`bg-gray-100  p-1 rounded-full opacity-75`}
         >
           <Ionicons name="chevron-back-circle" size={30} />
@@ -40,9 +40,17 @@ const ProductDetailsScreen = () => {
         {/* heart icon (favorite) */}
         <TouchableOpacity
           onPress={() => navigation.navigate("Cart")}
-          style={tw`bg-gray-100  p-1 rounded-full opacity-75`}
+          style={tw`bg-gray-100  relative p-2 rounded-full opacity-75`}
         >
-          <Ionicons name="heart" size={30} />
+          {/* Shopping Basket Icon */}
+          <FontAwesome name="shopping-basket" size={24} />
+
+          {/* Badge Notification */}
+          <View
+            style={tw`absolute -top-1 right-2 bg-red-500 rounded-full px-2 py-0.5`}
+          >
+            <Text style={tw`text-white text-xs font-bold`}>9</Text>
+          </View>
         </TouchableOpacity>
       </View>
 

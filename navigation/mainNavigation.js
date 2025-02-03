@@ -9,6 +9,8 @@ import CategoriesDisplaySreen from "../screens/shopScreens/CategoriesDisplaySree
 import CategoryProductsListScreen from "../screens/shopScreens/CategoryProductsListScreen";
 import ProductDetailsScreen from "../screens/shopScreens/ProductDetailsScreen";
 import CartScreen from "../screens/shopScreens/CartScreen";
+import DeliveryScreen from "../screens/shopScreens/DeliveryScreen";
+import PaymentMethodScreen from "../screens/shopScreens/PaymentMethodScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
@@ -43,6 +45,12 @@ const mainNavigation = () => {
         options: {
           headerShown: true,
         },
+      },
+      DeliveryInfo: {
+        screen: DeliveryScreen,
+      },
+      PaymentMethod: {
+        screen: PaymentMethodScreen,
       },
     },
   });

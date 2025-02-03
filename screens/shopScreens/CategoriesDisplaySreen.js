@@ -12,6 +12,7 @@ import tw from "twrnc";
 import { FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView } from "react-native";
+import Header from "../../components/share/Header";
 
 const data = [
   {
@@ -60,11 +61,8 @@ const CategoriesDisplaySreen = () => {
   return (
     <SafeAreaView style={tw`bg-[#fafbff] h-full w-full`}>
       <ScrollView style={tw`px-5 py-${Platform.OS === "ios" ? "2" : "10"}`}>
-        <View style={tw`flex flex-row justify-between`}>
-          <Text>menu</Text>
-          <Text>search</Text>
-          <Text>profile</Text>
-        </View>
+        {/* <Header /> */}
+        <Header type="shop" />
 
         <View style={tw`border border-red-200 my-4`}>
           <View style={tw` bg-[#2358ea] p-2 flex flex-row justify-between`}>
