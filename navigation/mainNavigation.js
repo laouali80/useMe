@@ -10,6 +10,7 @@ import CategoryProductsListScreen from "../screens/shopScreens/CategoryProductsL
 import ProductDetailsScreen from "../screens/shopScreens/ProductDetailsScreen";
 import CartScreen from "../screens/shopScreens/CartScreen";
 import DeliveryScreen from "../screens/shopScreens/DeliveryScreen";
+import PaymentMethodScreen from "../screens/shopScreens/PaymentMethodScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
@@ -47,6 +48,9 @@ const mainNavigation = () => {
       },
       DeliveryInfo: {
         screen: DeliveryScreen,
+      },
+      PaymentMethod: {
+        screen: PaymentMethodScreen,
       },
     },
   });

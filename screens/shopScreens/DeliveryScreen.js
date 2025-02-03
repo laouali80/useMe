@@ -66,7 +66,10 @@ const DeliveryScreen = () => {
         />
       </View>
 
-      <TouchableOpacity style={tw`bg-[#5c89f4] items-center p-5 rounded-lg`}>
+      <TouchableOpacity
+        style={tw`bg-[#5c89f4] items-center p-5 rounded-lg`}
+        onPress={() => navigation.navigate("PaymentMethod")}
+      >
         <Text style={tw`text-white font-bold`}>CONTINUE</Text>
       </TouchableOpacity>
     </SafeAreaView>

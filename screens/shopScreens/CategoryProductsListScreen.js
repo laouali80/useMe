@@ -20,7 +20,7 @@ const CategoryProductsListScreen = () => {
     <SafeAreaView style={tw`bg-[#fafbff] h-full w-full `}>
       <View style={tw`px-3 py-${Platform.OS === "ios" ? "2" : "10"}`}>
         {/* <Header /> */}
-        <Header />
+        <Header type="shop" />
 
         {/* Categories filter */}
         <View style={{ marginTop: 22 }}>
