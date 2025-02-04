@@ -1,4 +1,5 @@
-"# useMe"
+"# UseMe"
+UseMe is a mobil app with 2 main functionality of ordering a keke or cab ride and easy student shopping of product or any items available on the compus. It functionality does not limit to ride nd shopping but also an integrated wallet to make the payment process easier for student.
 
 npx expo start -c
 
