@@ -52,13 +52,13 @@ const Header = ({ type }) => {
 </Text> */}
       <TouchableOpacity
         onPress={() => navigation.goBack()}
-        // style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+        style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
       >
         <Ionicons name="menu" size={24} color="black" />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
-        // style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
+        style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}
       >
         <Ionicons name="menu" size={24} color="black" />
       </TouchableOpacity>

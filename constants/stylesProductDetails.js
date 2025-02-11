@@ -25,8 +25,8 @@ export default stylesProductDetails = StyleSheet.create({
   titleRow: {
     marginHorizontal: 20,
     paddingBottom: SIZES.small,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    // flexDirection: "row",
+    // justifyContent: "space-between",
     width: SIZES.width - 44,
     top: 20,
   },
@@ -43,15 +43,36 @@ export default stylesProductDetails = StyleSheet.create({
   },
   priceWrapper: {
     backgroundColor: COLORS.secondary,
-    borderRadiua: SIZES.large,
+    borderRadius: SIZES.large,
+    // alignItems: "center",
+
+    // Add solid red border
+    borderWidth: 2, // Thickness of the border
+    borderColor: "yellow", // Color of the border
+    borderStyle: "solid", // Ensures the border is solid
   },
 
   ratingRow: {
     paddingBottom: SIZES.small,
+    // flexDirection: "row",
+    // justifyContent: "space-between",
+    width: SIZES.width - 10,
+    top: 5,
+  },
+
+  qtyRow: {
+    paddingBottom: SIZES.small,
+
+    alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
     width: SIZES.width - 10,
     top: 5,
+
+    // Add solid red border
+    borderWidth: 2, // Thickness of the border
+    borderColor: "red", // Color of the border
+    borderStyle: "solid", // Ensures the border is solid
   },
 
   rating: {
@@ -62,9 +83,22 @@ export default stylesProductDetails = StyleSheet.create({
     marginHorizontal: SIZES.large,
   },
 
+  qty: {
+    top: SIZES.large,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    marginHorizontal: SIZES.large,
+
+    // Add solid red border
+    borderWidth: 2, // Thickness of the border
+    borderColor: "blue", // Color of the border
+    borderStyle: "solid", // Ensures the border is solid
+  },
   ratingText: {
     color: "grey",
     fontFamily: "medium",
+    fontSize: 20,
   },
 
   descriptionWrapper: {

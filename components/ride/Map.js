@@ -18,9 +18,7 @@ const Map = () => {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      let nigelec = await Location.geocodeAsync(
-        "NIGELEC MARADI, RN9, Maradi, Niger"
-      );
+      let nigelec = await Location.geocodeAsync("A8, Wuro Jebbe, Nigeria");
       // console.log(nigelec);
       setLocation(location);
       setGeoLocat(nigelec[0]);
