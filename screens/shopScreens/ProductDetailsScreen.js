@@ -64,9 +64,6 @@ const ProductDetailsScreen = () => {
       <View style={stylesProductDetails.productDetails}>
         <View style={stylesProductDetails.titleRow}>
           <Text style={stylesProductDetails.title}>Product</Text>
-          <View style={stylesProductDetails.priceWrapper}>
-            <Text style={stylesProductDetails.price}>N 1500</Text>
-          </View>
         </View>
 
         {/* Product rating and Qty */}
@@ -76,7 +73,7 @@ const ProductDetailsScreen = () => {
             <Text style={stylesProductDetails.ratingText}> (4.9)</Text>
           </View>
 
-          <View style={stylesProductDetails.rating}>
+          {/* <View style={stylesProductDetails.rating}>
             <TouchableOpacity onPress={increment}>
               <SimpleLineIcons name="plus" size={20} />
             </TouchableOpacity>
@@ -86,6 +83,25 @@ const ProductDetailsScreen = () => {
             <TouchableOpacity onPress={decrement}>
               <SimpleLineIcons name="minus" size={20} />
             </TouchableOpacity>
+          </View> */}
+        </View>
+
+        {/* Product Qty and price */}
+        <View style={stylesProductDetails.qtyRow}>
+          <View style={stylesProductDetails.qty}>
+            <TouchableOpacity onPress={increment}>
+              <SimpleLineIcons name="plus" size={40} />
+            </TouchableOpacity>
+
+            <Text style={stylesProductDetails.ratingText}> {count} </Text>
+
+            <TouchableOpacity onPress={decrement}>
+              <SimpleLineIcons name="minus" size={40} />
+            </TouchableOpacity>
+          </View>
+
+          <View style={stylesProductDetails.priceWrapper}>
+            <Text style={stylesProductDetails.price}>N 150</Text>
           </View>
         </View>
 
