@@ -1,24 +1,23 @@
-import { Platform, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
 import tw from "twrnc";
 import HomeWallet from "../../components/HomeWallet";
 import HomeNavOptions from "../../components/HomeNavOptions";
+import { FontAwesome, FontAwesome5, Ionicons } from "@expo/vector-icons";
+import Header from "../../components/share/Header";
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={tw`bg-[#fafbff] h-full w-full`}>
       <View style={tw`px-5 py-${Platform.OS === "ios" ? "2" : "10"}`}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Text>Hello, Gracey,</Text>
-          <Text>user profile</Text>
-        </View>
-
+        <Header type="welcome" />
         <HomeWallet />
         <HomeNavOptions />
       </View>
