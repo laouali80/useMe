@@ -10,10 +10,14 @@ const Header = ({ type }) => {
   const renderWelcomeHeader = () => (
     <View style={styles.rowContainer}>
       <Text>Hello, Gracey,</Text>
-      <Image
-        style={styles.profileImage}
-        source={require("../../assets/profile/prof1.jpg")}
-      />
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Main", { screen: "Profile" })}
+      >
+        <Image
+          style={styles.profileImage}
+          source={require("../../assets/profile/prof1.jpg")}
+        />
+      </TouchableOpacity>
     </View>
   );
 
@@ -41,7 +45,10 @@ const Header = ({ type }) => {
         <Ionicons name="menu" size={24} color="black" />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.profileButton}>
+      <TouchableOpacity
+        style={styles.profileButton}
+        onPress={() => navigation.navigate("Main", { screen: "Profile" })}
+      >
         <Image
           style={styles.profileImage}
           source={require("../../assets/profile/prof1.jpg")}
