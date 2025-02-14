@@ -10,7 +10,7 @@ import React from "react";
 import tw from "twrnc";
 import HomeWallet from "../../components/HomeWallet";
 import HomeNavOptions from "../../components/HomeNavOptions";
-import { FontAwesome, FontAwesome5, Ionicons } from "@expo/vector-icons";
+
 import Header from "../../components/share/Header";
 
 const HomeScreen = () => {
