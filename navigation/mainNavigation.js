@@ -11,6 +11,7 @@ import ProductDetailsScreen from "../screens/shopScreens/ProductDetailsScreen";
 import CartScreen from "../screens/shopScreens/CartScreen";
 import DeliveryScreen from "../screens/shopScreens/DeliveryScreen";
 import PaymentMethodScreen from "../screens/shopScreens/PaymentMethodScreen";
+import ProfileScreen from "../screens/profileScreen/ProfileScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
@@ -51,6 +52,13 @@ const mainNavigation = () => {
       },
       PaymentMethod: {
         screen: PaymentMethodScreen,
+      },
+      Profile: {
+        screen: ProfileScreen,
+        options: {
+          headerTitle: "Profile",
+          headerTitleAlign: "center",
+        },
       },
     },
   });
