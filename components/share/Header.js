@@ -9,7 +9,7 @@ const Header = ({ type }) => {
 
   const renderWelcomeHeader = () => (
     <View style={styles.rowContainer}>
-      <Text>Hello, Gracey,</Text>
+      <Text style={styles.username}>Hello, Gracey,</Text>
       <TouchableOpacity
         onPress={() => navigation.navigate("Main", { screen: "Profile" })}
       >
@@ -83,6 +83,7 @@ const styles = {
     justifyContent: "space-between",
     marginHorizontal: 16,
   },
+  username: tw`text-xl font-semibold my-5`,
   iconButton: tw`bg-gray-100 p-1 rounded-full opacity-75`,
   cartButton: tw`bg-gray-100 relative p-2 rounded-full opacity-75`,
   badge: tw`absolute -top-1 right-2 bg-red-500 rounded-full px-2 py-0.5`,
