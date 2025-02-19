@@ -30,56 +30,50 @@ const data = [
 const RideOptionsScreen = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
+
   return (
-    <SafeAreaView
-      style={tw`bg-white flex-grow rounded-tl-[20px] rounded-tr-[20px]`}
-    >
+    <SafeAreaView style={styles.container}>
+      {/* Header */}
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("DestinationSelectionScreen")}
-          style={tw`absolute top-3 left-5 z-50 p-3 rounded-full`}
+          style={styles.backButton}
         >
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
-        <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
+        <Text style={styles.headerText}>Select a Ride</Text>
       </View>
 
+      {/* Ride Options List */}
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}
-        renderItem={({ item: { id, title, multiplier, image }, item }) => (
+        renderItem={({ item }) => (
           <TouchableOpacity
-            style={tw`flex-row justify-between items-center px-10 ${
-              id === selected?.id && "bg-gray-200"
-            }`}
+            style={[
+              styles.rideOption,
+              selected?.id === item.id && styles.selectedRide,
+            ]}
             onPress={() => setSelected(item)}
           >
-            <Image
-              style={{
-                width: 100,
-                height: 100,
-                resizeMode: "contain",
-              }}
-              source={image}
-              // source={{ uri: image }}
-            />
-            <View style={tw`-ml-6`}>
-              <Text style={tw`text-xl font-semibold`}>{title}</Text>
+            <Image style={styles.rideImage} source={item.image} />
+            <View style={styles.rideDetails}>
+              <Text style={styles.rideTitle}>{item.title}</Text>
               <Text>Travel time...</Text>
             </View>
-            <Text style={tw`text-xl`}>N100</Text>
+            <Text style={styles.priceText}>N100</Text>
           </TouchableOpacity>
         )}
       />
 
+      {/* Select Button */}
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("TripScreen")}
-          style={tw`bg-[#2358ea] py-3 m-3 ${!selected && "bg-gray-300"}`}
+          disabled={!selected}
+          style={[styles.selectButton, !selected && styles.disabledButton]}
         >
-          <Text style={tw`text-center text-white text-xl`}>
-            Choose {selected?.title}
-          </Text>
+          <Text style={styles.buttonText}>Choose {selected?.title || ""}</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -88,4 +82,17 @@ const RideOptionsScreen = () => {
 
 export default RideOptionsScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: tw`bg-white flex-grow rounded-tl-[20px] rounded-tr-[20px]`,
+  backButton: tw`absolute top-3 left-5 z-50 p-3 rounded-full`,
+  headerText: tw`text-center py-5 text-xl`,
+  rideOption: tw`flex-row justify-between items-center px-10 py-3`,
+  selectedRide: tw`bg-gray-200`,
+  rideImage: { width: 100, height: 100, resizeMode: "contain" },
+  rideDetails: tw`-ml-6`,
+  rideTitle: tw`text-xl font-semibold`,
+  priceText: tw`text-xl`,
+  selectButton: tw`bg-[#2358ea] py-3 m-3`,
+  disabledButton: tw`bg-gray-300`,
+  buttonText: tw`text-center text-white text-xl`,
+});

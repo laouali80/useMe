@@ -1,26 +1,7 @@
 export const COLORS = {
-  primary: "#2158e9",
-  secondary: "",
-  tertiary: "",
-
-  offwhite: "#83829A",
-  white: "#FFFFFF",
-  black: "#000000",
-
-  deepGray: "#686868",
-
-  c2: "#fafbff", //(Light off-white)
-  c3: "#000000", //(Black)
-  c4: "#ededed", //(Light gray)
-  c5: "#fbfcff", //(Soft white)
-  c6: "#efefef", //(Grayish white)
-  c7: "#fefefe", //(Pure white)
-  c8: "#f9fafe", //(Very light blue-gray)
-  c9: "#f9f9f9", //(Pale gray)
+  primary: "#2358ea",
+  secondary: "#2158e8",
+  white: "#edf1ff",
+  black: "#000e33",
+  gray: "#4a4a4a",
 };
-
-("#2358ea"); // fund wallet
-("#ffffff"); //(White)  inside homeNav
-("#fafbff"); // background home
-("#5c89f4"); // account number
-("#c8d6fd"); //(Light pastel blue) wallet background

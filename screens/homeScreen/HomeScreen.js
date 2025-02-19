@@ -1,11 +1,4 @@
-import {
-  Image,
-  Platform,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Platform, SafeAreaView, StyleSheet, View } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import HomeWallet from "../../components/HomeWallet";

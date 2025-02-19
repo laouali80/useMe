@@ -9,7 +9,6 @@ import {
 import React from "react";
 import tw from "twrnc";
 import { useNavigation } from "@react-navigation/native";
-import shop from "../assets/images/shop.png";
 
 const data = [
   {

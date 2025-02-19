@@ -1,7 +1,5 @@
 import {
-  Button,
   Platform,
-  Pressable,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -71,6 +69,7 @@ const SignupScreen = () => {
           <TextInput
             style={tw`flex-1 font-semibold`}
             placeholder="Enter your email"
+            textContentType={emailAddress}
           />
         </View>
 
@@ -150,17 +149,4 @@ const SignupScreen = () => {
 
 export default SignupScreen;
 
-const styles = StyleSheet.create({
-  input: {
-    padding: 5,
-    borderColor: "black",
-    borderWidth: 1,
-    minWidth: 100,
-    marginBottom: 20,
-    marginHorizontal: 20,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 3,
-    // width: "50%",
-  },
-});
+const styles = StyleSheet.create({});
