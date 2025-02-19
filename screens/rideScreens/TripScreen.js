@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import React from "react";
 import Trip from "../../components/ride/Trip";
 import tw from "twrnc";

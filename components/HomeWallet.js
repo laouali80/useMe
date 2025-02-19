@@ -1,9 +1,11 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import tw, { style } from "twrnc";
+import tw from "twrnc";
 import { Feather, Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeWallet = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.walletContainer}>
       <Text style={styles.text}>Wallet Balance</Text>
@@ -19,7 +21,12 @@ const HomeWallet = () => {
           </View>
         </View>
         <View>
-          <Pressable style={styles.addFundBtn}>
+          <Pressable
+            onPress={() =>
+              navigation.navigate("Main", { screen: "FundWallet" })
+            }
+            style={styles.addFundBtn}
+          >
             <Feather name="plus-circle" size={24} color="white" />
             <Text style={tw`text-white`}>Fund wallet</Text>
           </Pressable>

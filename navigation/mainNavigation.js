@@ -12,6 +12,9 @@ import CartScreen from "../screens/shopScreens/CartScreen";
 import DeliveryScreen from "../screens/shopScreens/DeliveryScreen";
 import PaymentMethodScreen from "../screens/shopScreens/PaymentMethodScreen";
 import ProfileScreen from "../screens/profileScreen/ProfileScreen";
+import FundWithCardScreen from "../screens/walletScreens/FundWithCardScreen";
+import FundWithUSSDScreen from "../screens/walletScreens/FundWithUSSDScreen";
+import FundWalletScreen from "../screens/walletScreens/FundWalletScreen";
 
 const mainNavigation = () => {
   const mainNav = createNativeStackNavigator({
@@ -57,6 +60,27 @@ const mainNavigation = () => {
         screen: ProfileScreen,
         options: {
           headerTitle: "Profile",
+          headerTitleAlign: "center",
+        },
+      },
+      FundWallet: {
+        screen: FundWalletScreen,
+        options: {
+          headerTitle: "Fund Wallet",
+          headerTitleAlign: "center",
+        },
+      },
+      FundWithCard: {
+        screen: FundWithCardScreen,
+        options: {
+          headerTitle: "Fund with debit card",
+          headerTitleAlign: "center",
+        },
+      },
+      FundWithUSSD: {
+        screen: FundWithUSSDScreen,
+        options: {
+          headerTitle: "Fund with USSD code",
           headerTitleAlign: "center",
         },
       },

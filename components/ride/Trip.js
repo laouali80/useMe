@@ -4,8 +4,6 @@ import Rating from "../Rating";
 import tw from "twrnc";
 import { Ionicons, Entypo, Feather } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
-// import Entypo from "@expo/vector-icons/Entypo";
-// import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Trip = ({ status }) => {
   return (

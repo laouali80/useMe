@@ -5,7 +5,6 @@ import {
   Entypo,
   FontAwesome6,
   Foundation,
-  Ionicons,
   SimpleLineIcons,
 } from "@expo/vector-icons";
 import tw from "twrnc";

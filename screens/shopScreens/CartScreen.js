@@ -1,10 +1,4 @@
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import React, { useLayoutEffect } from "react";
 import CartEmpty from "../../components/shop/CartEmpty";
 import tw from "twrnc";

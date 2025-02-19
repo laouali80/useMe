@@ -7,8 +7,7 @@ import {
   View,
 } from "react-native";
 import React from "react";
-// import { productList } from "../../constants/ProductList";
-import { productList } from "../../constants/ProductList";
+import { productList } from "../../mockData/ProductList";
 import tw from "twrnc";
 import { useNavigation } from "@react-navigation/core";
 
