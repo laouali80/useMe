@@ -69,7 +69,7 @@ const SignupScreen = () => {
           <TextInput
             style={tw`flex-1 font-semibold`}
             placeholder="Enter your email"
-            textContentType={emailAddress}
+            textContentType="emailAddress"
           />
         </View>
 
