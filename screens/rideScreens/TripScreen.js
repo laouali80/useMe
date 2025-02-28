@@ -8,7 +8,7 @@ const TripScreen = () => {
     <SafeAreaView
       style={tw`bg-white flex-grow rounded-tl-[20px] rounded-tr-[20px]`}
     >
-      <Trip status={"approaching"} />
+      <Trip status={"endTrip"} />
     </SafeAreaView>
   );
 };
